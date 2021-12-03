@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import AuthInput from "../components/auth/AuthInput";
 import { IconAtencao, IconGmail } from "../components/icons";
 import useAuth from "../data/hook/useAuth";
@@ -31,7 +32,7 @@ export default function Autenticacao() {
   return (
     <div className="flex h-screnn items-center justify-center">
       <div className="hidden md:block md:w-1/2 lg:w-2/3">
-        <img
+        <Image
           src="https://source.unsplash.com/random"
           alt="Imagem da tela de Autenticação"
           className="h-screen w-full object-cover"
