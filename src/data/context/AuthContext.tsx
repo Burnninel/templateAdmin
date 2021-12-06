@@ -29,11 +29,11 @@ async function usuarioNormalizado(usuarioFirebase: firebase.User): Promise<Usuar
 
 function gerenciarCookie(logado: boolean) {
     if (logado) {
-        Cookies.set('admin-template', logado, {
+        Cookies.set('template-admin-burn', logado, {
             expires: 7
         })
     } else {
-        Cookies.remove('admin-template')
+        Cookies.remove('template-admin-burn')
     }
 }
 
@@ -107,7 +107,7 @@ export function AuthProvider(props) {
     }
 
     useEffect(() => {
-        if(Cookies.get('admin-template')) {
+        if(Cookies.get('template-admin-burn')) {
             const cancelar = firebase.auth().onIdTokenChanged(configurarSessao)
             return () => cancelar()
         } else {
