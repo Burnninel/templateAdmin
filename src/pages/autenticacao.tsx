@@ -86,8 +86,7 @@ export default function Autenticacao() {
         <hr className="my-6 border-gray-300 w-full" />
 
         <button
-          onClick={loginGoogle}
-          className={`
+          onClick={loginGoogle} className={`
                 w-full bg-red-500 hover:bg-red-400
                 text-white rounded-lg px-10 py-3 mt-6
             `}

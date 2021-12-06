@@ -90,17 +90,17 @@ export function AuthProvider(props: {
 
   async function loginGoogle() {
     try {
-      setCarregando(true);
-      const resp = await firebase
-        .auth()
-        .signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        setCarregando(true)
+        const resp = await firebase.auth().signInWithPopup(
+            new firebase.auth.GoogleAuthProvider()
+        )
 
-      await configurarSessao(resp.user);
-      route.push("/");
+        await configurarSessao(resp.user)
+        route.push('/')
     } finally {
-      setCarregando(false);
+        setCarregando(false)
     }
-  }
+}
 
   async function logout() {
     try {
