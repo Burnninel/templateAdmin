@@ -88,13 +88,14 @@ export default function Autenticacao() {
         <button
           onClick={loginGoogle}
           className={`
-                flex justify-center items-center
                 w-full bg-red-500 hover:bg-red-400
-                text-white rounded-lg 
+                text-white rounded-lg px-10 py-3 mt-6
             `}
-        >
-          <div>{IconGmail(14)}</div>
-          Entrar com Google
+        > 
+          <div className={`flex justify-center `}>
+            {IconGmail()}
+            <div className={`px-3`}>Entrar com Google</div> 
+          </div> 
         </button>
         {modo === "login" ? (
           <p className="mt-8">
