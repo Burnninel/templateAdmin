@@ -33,7 +33,7 @@ export default function ForcarAutenticacao(props) {
             flex justify-center items-center h-screen
         `}
       >
-        <Image src={loading} alt="Gif loading"/>
+        <Image src={loading} alt="Gif loading" />
       </div>
     );
   }
